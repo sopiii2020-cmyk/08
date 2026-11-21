@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">دستیار GPS و آنتن</string>
+    <string name="tile_label">پایدارساز GPS</string>
+    <string name="widget_description">شروع و توقف سریع پایدارسازی بی‌صدای GPS و اتصال دیتا</string>
+</resources>

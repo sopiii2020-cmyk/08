@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>پایشگر GPS و پایداری اتصال | دستیار رانندگان</title>
+  </head>
+  <body class="bg-slate-50 text-slate-900 antialiased">
+    <div id="root">
+      <div style="font-family: sans-serif; direction: rtl; padding: 24px; text-align: center; color: #0f172a;">
+        در حال آماده‌سازی پنل پایشگر GPS و اتصال...
+      </div>
+    </div>
+    <script>
+      window.addEventListener('error', function (ev) {
+        var root = document.getElementById('root');
+        if (root && !root.dataset.mounted) {
+          root.innerHTML =
+            '<div style="font-family:sans-serif;direction:rtl;padding:24px;color:#991b1b;background:#fef2f2;margin:16px;border-radius:12px;">' +
+            '<strong>خطای بارگذاری رابط کاربری:</strong> ' +
+            (ev && ev.message ? String(ev.message) : 'خطای نامشخص WebView') +
+            '</div>';
+        }
+      });
+    </script>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
